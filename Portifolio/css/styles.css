@@ -1,0 +1,149 @@
+/* 
+    Created on : Jun 20, 2019, 2:07:18 PM
+    Author     : victormune
+*/
+
+.container{
+    background-color: #000000;
+    horiz-align: right;
+}
+
+
+/* Core Styles*/
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: orange;
+    color: white;
+    font-size: 1.1em;
+    line-height: 1.5;
+    text-align: center;
+    cursor: default;
+   }
+
+img{
+    display: block;
+    width: 100%;
+    height: auto;
+    }
+h1, h2, h3{
+    margin: 0;
+    padding: 1em 0;
+    }
+p{
+    margin: 0;
+    padding: 1em 0;
+    }
+.btn{
+    display: inline-block;
+    background: darkslategray;
+    text-decoration: whitesmoke;
+    padding: 1em 2em;
+    border: 1px dot-dot-dash orange;
+    margin: .5em 0;
+
+    }
+.btn:hover{
+    background: cornflowerblue;
+    color: white;
+}
+
+/*---nav-bar--->*/
+#show-case{
+    min-height: 450px;
+    text-align: center;
+    color: black;
+}
+#show-case .bg-image{
+    position: absolute;
+    background: darkslategray url("/img/forest.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width:100px;
+    height: 450px;
+    z-index: -1;
+    opacity: 0.4%;
+}
+#show-case h1{
+    padding-top: 100px;
+    padding-bottom: 0;
+
+}
+#show-case .content-wrap,
+#victor-cv .content-wrap{
+    padding: 0 1.5em;
+}
+
+/*main---page--*/
+
+#victor-cv{
+    background: darkslategray;
+    padding-bottom: 2em;
+}
+
+#victor-cv ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#victor-cv li{
+    margin-bottom: 1em;
+    background: lightgray;
+    color: black;
+    font-style: oblique;
+}
+.card-content{
+    padding: 1.5em;
+}
+#contact{
+    background: black;
+    color: white;
+    padding: 2em;
+    font-style: italic;
+
+}
+/*--main-footer--*/
+
+#main-footer{
+    background: orange;
+    color: black;
+    padding: 2em;
+    text-align: center;
+}
+
+/*media query*/
+
+@media(min-width: 700px){
+    .grid{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    #victor-cv .content-text{
+        columns: 1;
+        column-gap: 1px;
+    }
+    #victor-cv .content-text p{
+        padding-top: 0;
+    }
+
+    .content-wrap,
+    #victor-cv ul{
+        grid-column: 1;
+
+    }
+    .box, #main-footer div{
+    	grid-column: span 1;
+    }
+    #victor-cv ul{
+    	display: flex;
+        justify-content: space-around;
+
+    }
+    #victor-cv li{
+        width: 31%;
+
+    }
+
+}
